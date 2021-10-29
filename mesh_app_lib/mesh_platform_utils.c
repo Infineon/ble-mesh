@@ -1,5 +1,5 @@
 /******************************************************************************
-* File Name:   mesh_platform_utils.h
+* File Name:   mesh_platform_utils.c
 *
 * Description: This file has platform level utillity function implementation
 *
@@ -22,10 +22,7 @@
 #include "wiced_bt_mesh_models.h"
 #include "mesh_cfg.h"
 
-#if 0 /* BTSTACK > 3.1*/
-EC curve_p256;
-EC* p_curve_p256 = &curve_p256;
-#endif
+
 uint16_t wiced_bt_mesh_core_nvm_idx_fw_distributor;
 
 uint32_t cy_get_rand()

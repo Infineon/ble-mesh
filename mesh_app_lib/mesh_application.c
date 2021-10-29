@@ -31,7 +31,6 @@ static void	mesh_adv_report(wiced_bt_ble_scan_results_t *p_scan_result, uint8_t 
  ******************************************************/
 
 wiced_bt_cfg_settings_t* p_wiced_bt_mesh_cfg_settings;
-
 wiced_bt_mesh_core_received_msg_handler_t p_app_model_message_handler = NULL;
 wiced_bt_mesh_core_received_msg_handler_t p_proxy_status_message_handler = NULL;
 
@@ -272,10 +271,6 @@ void mesh_state_changed_cb(wiced_bt_mesh_core_state_type_t type, wiced_bt_mesh_c
 
     case WICED_BT_MESH_CORE_STATE_LPN_SLEEP:
         printf("mesh_state_changed_cb:LPN_SLEEP: timeout:%d\n", (int)p_state->lpn_sleep);
-        if (wiced_is_timer_in_use(&app_timer))
-        {
-            wiced_stop_timer(&app_timer);
-        }
         if (wiced_bt_mesh_app_func_table.p_mesh_app_lpn_sleep)
         {
             wiced_bt_mesh_app_func_table.p_mesh_app_lpn_sleep(p_state->lpn_sleep);
@@ -524,13 +519,11 @@ void mesh_application_nvram_id_init(void)
     wiced_bt_mesh_core_nvm_idx_health_state = wiced_bt_mesh_core_nvm_idx_app_key_begin - 1;
     wiced_bt_mesh_core_nvm_idx_cfg_data = wiced_bt_mesh_core_nvm_idx_health_state - ((cfg_data_len + (WICED_BT_MESH_CORE_NVRAM_CHUNK_MAX_SIZE - 1)) / WICED_BT_MESH_CORE_NVRAM_CHUNK_MAX_SIZE);
     mesh_nvm_idx_seq                                = wiced_bt_mesh_core_nvm_idx_cfg_data - 1;
-#ifndef CYW20706A2
+
     wiced_bt_mesh_core_nvm_idx_fw_distributor       = mesh_nvm_idx_seq - 1000;
-#endif
-    // don't support Directed Forwarding on 20706
-#ifndef CYW20706A2
+
     wiced_bt_mesh_core_nvm_idx_df_config            = mesh_nvm_idx_seq - 1000;
-#endif
+
     printf("mesh_application_nvram_id_init: done\r\n");
 
     /* Initialization of curve */
