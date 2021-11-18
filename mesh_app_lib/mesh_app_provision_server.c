@@ -1,15 +1,16 @@
-/*
- * $ Copyright 2016-YEAR Cypress Semiconductor $
- */
-
-/** @file
+/******************************************************************************
+* File Name:   mesh_app_provision_server.c
  *
- * This file contains functionality required for the device to be provisioned to be
- * a part of the mesh network.
+* Description:  This file contains functionality required for the device to be
+*               provisioned to be a part of the mesh network.
  *
- */
+*******************************************************************************
+* $ Copyright 2021-YEAR Cypress Semiconductor $
+*******************************************************************************/
 
-
+/*******************************************************************************
+ * Header file includes
+ ******************************************************************************/
 #include "bt_types.h"
 #include "wiced_bt_ble.h"
 #include "wiced_bt_gatt.h"
@@ -20,22 +21,24 @@
 #include "cy_retarget_io.h"
 #include "bt_app.h"
 
-
+/*******************************************************************************
+ * Macros
+ ******************************************************************************/
 #define BE2TOUINT16(p) ((uint16_t)(p)[1] + (((uint16_t)(p)[0])<<8))
 #define UINT16TOBE2(p, ui) (p)[0]=(uint8_t)((ui)>>8); (p)[1]=(uint8_t)(ui)
 
-/******************************************************
+/*******************************************************************************
  *          Structures
- ******************************************************/
+ ******************************************************************************/
 typedef struct
 {
     uint32_t conn_id;
     wiced_bt_mesh_provision_server_callback_t *p_parent_callback;
 } mesh_app_provision_state_t;
 
-/******************************************************
+/*******************************************************************************
  *          Function Prototypes
- ******************************************************/
+ ******************************************************************************/
 static void            mesh_app_provision_started(uint32_t conn_id);
 static void            mesh_app_provision_end(uint32_t conn_id, uint16_t addr, uint16_t net_key_idx, uint8_t result, const uint8_t *p_dev_key);
 static wiced_bool_t    mesh_app_provision_get_oob(uint32_t conn_id, uint8_t type, uint8_t size, uint8_t action);
@@ -47,17 +50,17 @@ static void            mesh_app_provision_gatt_send_cb(uint16_t conn_id, const u
  ******************************************************/
 wiced_bt_mesh_provision_capabilities_data_t provisioning_config =
 {
-    .pub_key_type      = 0,      // If 1 Public Key OOB information available
-    .static_oob_type   = 0,      // Supported static OOB Types (1 if available)
-    .output_oob_size   = 0,      // Maximum size of Output OOB supported (0 - device does not support output OOB, 1-8 max size in octets supported by the device)
-    .output_oob_action = 0,      // Output OOB Action field values (see @ref BT_MESH_OUT_OOB_ACT "Output OOB Action field values")
-    .input_oob_size    = 0,      // Maximum size in octets of Input OOB supported
-    .input_oob_action  = 0,      // Supported Input OOB Actions (see @ref BT_MESH_IN_OOB_ACT "Input OOB Action field values")
+    .pub_key_type      = 0u,      // If 1 Public Key OOB information available
+    .static_oob_type   = 0u,      // Supported static OOB Types (1 if available)
+    .output_oob_size   = 0u,      // Maximum size of Output OOB supported (0 - device does not support output OOB, 1-8 max size in octets supported by the device)
+    .output_oob_action = 0u,      // Output OOB Action field values (see @ref BT_MESH_OUT_OOB_ACT "Output OOB Action field values")
+    .input_oob_size    = 0u,      // Maximum size in octets of Input OOB supported
+    .input_oob_action  = 0u,      // Supported Input OOB Actions (see @ref BT_MESH_IN_OOB_ACT "Input OOB Action field values")
 };
 
 mesh_app_provision_state_t state =
 {
-    .conn_id = 0,
+    .conn_id = 0u,
     .p_parent_callback = NULL,
 };
 
@@ -90,7 +93,7 @@ void wiced_bt_mesh_app_provision_server_configure(wiced_bt_mesh_provision_capabi
  */
 void mesh_app_provision_started(uint32_t conn_id)
 {
-    printf("mesh_app_provision_started: conn_id:0x%x\r\n", conn_id);
+    printf("mesh_app_provision_started: conn_id:%ld\r\n", conn_id);
     if (state.p_parent_callback)
         (*state.p_parent_callback)(WICED_BT_MESH_PROVISION_STARTED, NULL);
 
@@ -102,7 +105,7 @@ void mesh_app_provision_started(uint32_t conn_id)
 void mesh_app_provision_end(uint32_t conn_id, uint16_t addr, uint16_t net_key_idx, uint8_t result, const uint8_t *p_dev_key)
 {
     wiced_bt_mesh_provision_status_data_t data;
-    printf("mesh_app_provision_end: conn_id:0x%x result:%d dev_key:\r\n", conn_id, result);
+    printf("mesh_app_provision_end: conn_id:%ld result:%d dev_key:\r\n", conn_id, result);
    //ok WICED_BT_TRACE_ARRAY((uint8_t*)p_dev_key, 16, "");
 
     if (state.p_parent_callback != NULL)
@@ -154,7 +157,7 @@ void mesh_app_provision_gatt_send_cb(uint16_t conn_id, const uint8_t *packet, ui
 		return;
 	}
 	memcpy(p_data, packet, packet_len);
-    printf("mesh_app_provision_gatt_send_cb: conn_id:0x%x\r\n", conn_id);
+    printf("mesh_app_provision_gatt_send_cb: conn_id:%ld\r\n", conn_id);
     //WICED_BT_TRACE_ARRAY((char*)packet, packet_len, "");
     wiced_bt_gatt_server_send_notification(conn_id, HANDLE_CHAR_MESH_PROVISIONING_DATA_OUT_VALUE, packet_len, p_data, bt_app_free_buffer);
 
@@ -178,7 +181,7 @@ wiced_bool_t mesh_app_provision_get_capabilities(uint32_t conn_id)
     capabilities.output_oob_size = provisioning_config.output_oob_size;
     UINT16TOBE2(capabilities.input_oob_action, provisioning_config.input_oob_action);
     capabilities.input_oob_size = provisioning_config.input_oob_size;
-    printf("mesh_app_provision_get_capabilities: conn_id:0x%x\n", conn_id);
+    printf("mesh_app_provision_get_capabilities: conn_id:%ld\r\n", conn_id);
     // now we can proceed
     wiced_bt_mesh_core_provision_set_capabilities(conn_id, &capabilities);
     return WICED_TRUE;

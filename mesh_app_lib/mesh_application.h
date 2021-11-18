@@ -8,9 +8,15 @@
 *******************************************************************************
 * $ Copyright 2021-YEAR Cypress Semiconductor $
 *******************************************************************************/
+/*******************************************************************************
+ * Include guard
+ ******************************************************************************/
 #ifndef MESH_APPLICATION_H_
 #define MESH_APPLICATION_H_
 
+/******************************************************************************
+* Function Prototypes
+*******************************************************************************/
 void mesh_state_changed_cb(wiced_bt_mesh_core_state_type_t type, wiced_bt_mesh_core_state_t *p_state);
 void mesh_start_stop_scan_callback(wiced_bool_t start, wiced_bool_t is_scan_active);
 wiced_bt_mesh_core_received_msg_handler_t mesh_message_handler_callback(uint16_t company_id,

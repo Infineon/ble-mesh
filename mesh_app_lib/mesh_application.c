@@ -24,11 +24,40 @@
 #include "mesh_platform_utils.h"
 #include "p_256_ecc_pp.h"
 
+/*******************************************************************************
+ * Function Prototypes
+ ******************************************************************************/
 static void	mesh_adv_report(wiced_bt_ble_scan_results_t *p_scan_result, uint8_t *p_adv_data);
 
-/******************************************************
+/*******************************************************************************
  *          Structures
- ******************************************************/
+ ******************************************************************************/
+EC curve_p256;
+extern EC* p_curve_p256;
+
+wiced_timer_t app_timer;
+
+#pragma pack(1)
+#ifndef PACKED
+#define PACKED
+#endif
+
+// represents data saved in the NVRAM with index mesh_nvm_idx_seq
+typedef PACKED struct
+{
+    uint32_t    seq;        // self SEQ
+    uint16_t    size;       // Size of the RPL - number of RPL items
+} mesh_app_rpl_init_t;
+
+#define MESH_APP_RPL_ITEM_PREV_IVI_FLAG 0x8000
+// Represents one RPL entry in the NVRAM
+typedef PACKED struct
+{
+    uint16_t    addr;       // Bit MESH_APP_RPL_ITEM_PREV_IVI_FLAG means previous IVI
+    uint8_t     seq[3];     // latest SEQ for SRC addr
+} mesh_app_rpl_item_t;
+
+#pragma pack()
 
 wiced_bt_cfg_settings_t* p_wiced_bt_mesh_cfg_settings;
 wiced_bt_mesh_core_received_msg_handler_t p_app_model_message_handler = NULL;
@@ -56,33 +85,6 @@ uint8_t  wiced_bt_mesh_scene_max_num;
 uint8_t  wiced_bt_mesh_scheduler_events_max_num;
 
 uint16_t mesh_nvm_idx_seq;
-
-EC curve_p256;
-extern EC* p_curve_p256;
-
-wiced_timer_t app_timer;
-
-#pragma pack(1)
-#ifndef PACKED
-#define PACKED
-#endif
-
-// represents data saved in the NVRAM with index mesh_nvm_idx_seq
-typedef PACKED struct
-{
-    uint32_t    seq;        // self SEQ
-    uint16_t    size;       // Size of the RPL - number of RPL items
-} mesh_app_rpl_init_t;
-
-#define MESH_APP_RPL_ITEM_PREV_IVI_FLAG 0x8000
-// Represents one RPL entry in the NVRAM
-typedef PACKED struct
-{
-    uint16_t    addr;       // Bit MESH_APP_RPL_ITEM_PREV_IVI_FLAG means previous IVI
-    uint8_t     seq[3];     // latest SEQ for SRC addr
-} mesh_app_rpl_item_t;
-
-#pragma pack()
 
 // current value of own SEQ and RPL size
 static mesh_app_rpl_init_t mesh_app_rpl_init = { 0 };
@@ -478,9 +480,8 @@ uint8_t mesh_application_get_element_count(uint16_t model_id)
 
 void mesh_application_factory_reset(void)
 {
-    // uncomment following lines to delete UUID from the NV. This will change UUID on factory reset.
-    // wiced_result_t result;
-    // mesh_nvram_access(WICED_TRUE, NVRAM_ID_LOCAL_UUID, NULL, 0, &result);
+    wiced_result_t result;
+    mesh_nvram_access(WICED_TRUE, MESH_UUID_LOCAL_FLASH_ID, NULL, 0, &result);
 
     mesh_core_reset(WICED_FALSE, WICED_TRUE);
 
