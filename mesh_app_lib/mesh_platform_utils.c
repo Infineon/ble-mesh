@@ -59,7 +59,7 @@ uint32_t wiced_hal_rand_gen_num(void)
 
 void wiced_hal_wdog_reset_system(void)
 {
-
+	mesh_application_factory_reset();
 }
 
 void wiced_hal_rand_gen_num_array(uint32_t* randNumberArrayPtr, uint32_t length)

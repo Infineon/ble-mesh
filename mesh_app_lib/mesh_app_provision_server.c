@@ -1,9 +1,9 @@
 /******************************************************************************
 * File Name:   mesh_app_provision_server.c
- *
+*
 * Description:  This file contains functionality required for the device to be
 *               provisioned to be a part of the mesh network.
- *
+*
 *******************************************************************************
 * $ Copyright 2021-YEAR Cypress Semiconductor $
 *******************************************************************************/
@@ -28,21 +28,21 @@
 #define UINT16TOBE2(p, ui) (p)[0]=(uint8_t)((ui)>>8); (p)[1]=(uint8_t)(ui)
 
 /*******************************************************************************
- *          Structures
+ * Structures
  ******************************************************************************/
 typedef struct
 {
-    uint32_t conn_id;
+    uint16_t conn_id;
     wiced_bt_mesh_provision_server_callback_t *p_parent_callback;
 } mesh_app_provision_state_t;
 
 /*******************************************************************************
- *          Function Prototypes
+ * Function Prototypes
  ******************************************************************************/
-static void            mesh_app_provision_started(uint32_t conn_id);
-static void            mesh_app_provision_end(uint32_t conn_id, uint16_t addr, uint16_t net_key_idx, uint8_t result, const uint8_t *p_dev_key);
-static wiced_bool_t    mesh_app_provision_get_oob(uint32_t conn_id, uint8_t type, uint8_t size, uint8_t action);
-static wiced_bool_t    mesh_app_provision_get_capabilities(uint32_t conn_id);
+static void            mesh_app_provision_started(uint16_t conn_id);
+static void            mesh_app_provision_end(uint16_t conn_id, uint16_t addr, uint16_t net_key_idx, uint8_t result, const uint8_t *p_dev_key);
+static wiced_bool_t    mesh_app_provision_get_oob(uint16_t conn_id, uint8_t type, uint8_t size, uint8_t action);
+static wiced_bool_t    mesh_app_provision_get_capabilities(uint16_t conn_id);
 static void            mesh_app_provision_gatt_send_cb(uint16_t conn_id, const uint8_t *packet, uint32_t packet_len);
 
 /******************************************************
@@ -91,9 +91,9 @@ void wiced_bt_mesh_app_provision_server_configure(wiced_bt_mesh_provision_capabi
 /*
  * This callback is executed by the core library on successful start of provisioning.
  */
-void mesh_app_provision_started(uint32_t conn_id)
+void mesh_app_provision_started(uint16_t conn_id)
 {
-    printf("mesh_app_provision_started: conn_id:%ld\r\n", conn_id);
+    printf("mesh_app_provision_started: conn_id:%d\r\n", conn_id);
     if (state.p_parent_callback)
         (*state.p_parent_callback)(WICED_BT_MESH_PROVISION_STARTED, NULL);
 
@@ -102,11 +102,10 @@ void mesh_app_provision_started(uint32_t conn_id)
 /*
  * This callback is executed by the core library at the end of the provisioning.
  */
-void mesh_app_provision_end(uint32_t conn_id, uint16_t addr, uint16_t net_key_idx, uint8_t result, const uint8_t *p_dev_key)
+void mesh_app_provision_end(uint16_t conn_id, uint16_t addr, uint16_t net_key_idx, uint8_t result, const uint8_t *p_dev_key)
 {
     wiced_bt_mesh_provision_status_data_t data;
-    printf("mesh_app_provision_end: conn_id:%ld result:%d dev_key:\r\n", conn_id, result);
-   //ok WICED_BT_TRACE_ARRAY((uint8_t*)p_dev_key, 16, "");
+    printf("mesh_app_provision_end: conn_id:%d result:%d\r\n", conn_id, result);
 
     if (state.p_parent_callback != NULL)
     {
@@ -124,7 +123,7 @@ void mesh_app_provision_end(uint32_t conn_id, uint16_t addr, uint16_t net_key_id
 /*
  * This callback is executed by the core library to get OOB data.
  */
-wiced_bool_t mesh_app_provision_get_oob(uint32_t conn_id, uint8_t type, uint8_t size, uint8_t action)
+wiced_bool_t mesh_app_provision_get_oob(uint16_t conn_id, uint8_t type, uint8_t size, uint8_t action)
 {
     wiced_bt_mesh_provision_device_oob_request_data_t data;
     if (state.p_parent_callback != NULL)
@@ -153,18 +152,18 @@ wiced_bool_t mesh_app_provision_set_oob(uint8_t* p_oob, uint8_t len)
 void mesh_app_provision_gatt_send_cb(uint16_t conn_id, const uint8_t *packet, uint32_t packet_len)
 {
     uint8_t * p_data = bt_app_alloc_buffer(packet_len);
-	if(!p_data){
-		return;
-	}
-	memcpy(p_data, packet, packet_len);
-    printf("mesh_app_provision_gatt_send_cb: conn_id:%ld\r\n", conn_id);
+    if(!p_data){
+        return;
+    }
+    memcpy(p_data, packet, packet_len);
+    printf("mesh_app_provision_gatt_send_cb: conn_id:%d\r\n", conn_id);
     //WICED_BT_TRACE_ARRAY((char*)packet, packet_len, "");
     wiced_bt_gatt_server_send_notification(conn_id, HANDLE_CHAR_MESH_PROVISIONING_DATA_OUT_VALUE, packet_len, p_data, bt_app_free_buffer);
 
 }
 
 // for provisioning app it should set its capabilities.
-wiced_bool_t mesh_app_provision_get_capabilities(uint32_t conn_id)
+wiced_bool_t mesh_app_provision_get_capabilities(uint16_t conn_id)
 {
     // We use 0 in all members of capabilities (except algorithm) which means no any OOB data
     wiced_bt_mesh_core_provision_capabilities_t capabilities;
@@ -181,7 +180,7 @@ wiced_bool_t mesh_app_provision_get_capabilities(uint32_t conn_id)
     capabilities.output_oob_size = provisioning_config.output_oob_size;
     UINT16TOBE2(capabilities.input_oob_action, provisioning_config.input_oob_action);
     capabilities.input_oob_size = provisioning_config.input_oob_size;
-    printf("mesh_app_provision_get_capabilities: conn_id:%ld\r\n", conn_id);
+    printf("mesh_app_provision_get_capabilities: conn_id:%d\r\n", conn_id);
     // now we can proceed
     wiced_bt_mesh_core_provision_set_capabilities(conn_id, &capabilities);
     return WICED_TRUE;
