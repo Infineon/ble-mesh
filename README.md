@@ -13,4 +13,4 @@ LE Mesh library is used in conjuction with BTStack and a porting layer such as t
 
 [Bluetooth LE Mesh Library release notes](./RELEASE.md)
 
-For LE Mesh APIs, refer to the [API reference manual](https://cypresssemiconductorco.github.io/ble-mesh/api_reference_manual/html/index.html).
+For LE Mesh APIs, refer to the [API reference manual](https://infineon.github.io/ble-mesh/api_reference_manual/html/index.html).
