@@ -32,11 +32,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "group__wiced__bt__mesh.html",
-"group__wiced__bt__mesh__light__hsl__client.html#gab9871a0e3021f547ca0e69287758b33e",
-"group__wiced__bt__mesh__provisioning.html#ga438544ce7019e1a48dcfef67b2f5bc73",
-"structwiced__bt__mesh__core__state__app__key__t.html#aeab2d03fca253cb0f728cdf9d26dd67c",
-"structwiced__bt__mesh__light__lightness__status__t.html#ac87813ae70c8d60be8dcf5b1e6fd8dbf",
-"unionwiced__bt__mesh__core__state__t.html#aca8e90dfffe25efd6847542cb5db2233"
+"group__wiced__bt__mesh__light__ctl__server.html#ga31d00ceb59ef7db4fc28879b20509808",
+"group__wiced__bt__mesh__provisioning.html#ga1b611e4bc76b7eac6a432055c0d8126e",
+"structwiced__bt__mesh__core__hal__api__t.html#a30c0d0174e439c75f7e45c0aa3e01a30",
+"structwiced__bt__mesh__light__lc__property__get__data__t.html#a883dd9b380643e8d0deb90109b7c1306",
+"structwiced__bt__mesh__sensor__config__cadence__t.html#a07441afe04c45a42bc8d357c650af8ff"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

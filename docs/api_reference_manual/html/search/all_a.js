@@ -19,5 +19,6 @@ var searchData=
   ['local_5fnorth',['local_north',['../structwiced__bt__mesh__location__local__data__t.html#a18f8f28eb6157c5768a16771f6d2f2a7',1,'wiced_bt_mesh_location_local_data_t']]],
   ['lpn',['lpn',['../unionwiced__bt__mesh__core__state__t.html#a997392f6f6d086a65cdb50157f0bf549',1,'wiced_bt_mesh_core_state_t']]],
   ['lpn_5fscan',['lpn_scan',['../unionwiced__bt__mesh__core__state__t.html#a64d8d77d6a558bcd2c0c4cabe3502e21',1,'wiced_bt_mesh_core_state_t']]],
-  ['lpn_5fsleep',['lpn_sleep',['../unionwiced__bt__mesh__core__state__t.html#ae352391994e08b9a4eb2f6112f6baa72',1,'wiced_bt_mesh_core_state_t']]]
+  ['lpn_5fsleep',['lpn_sleep',['../unionwiced__bt__mesh__core__state__t.html#ae352391994e08b9a4eb2f6112f6baa72',1,'wiced_bt_mesh_core_state_t']]],
+  ['le_20mesh',['LE Mesh',['../group__wiced__bt__mesh.html',1,'']]]
 ];

@@ -90,11 +90,11 @@ $(document).ready(function(){initNavTree('group__wiced__bt__mesh__location__serv
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Mesh Location Server<div class="ingroups"><a class="el" href="group__wiced__bt__mesh.html">BLE Mesh</a> &raquo; <a class="el" href="group__wiced__bt__mesh__models.html">Mesh Models Library API</a></div></div>  </div>
+<div class="title">Mesh Location Server<div class="ingroups"><a class="el" href="group__wiced__bt__mesh.html">LE Mesh</a> &raquo; <a class="el" href="group__wiced__bt__mesh__models.html">Mesh Models Library API</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">General Description</h2>
-<p>The WICED Mesh Location Server module provides a way for a client to set the Global and Local location for a mesh device. </p>
+<p>The AIROC Mesh Location Server module provides a way for a client to set the Global and Local location for a mesh device. </p>
 <p>Setup location can be retrieved by the same or different clients. The Location Server may also be configured to publish unsolicited messages with the location information to a specific node or to a group of nodes.</p>
 <p>Two types of location information can be exchanged between the client and the server. The Global Location Data (see <a class="el" href="structwiced__bt__mesh__location__global__data__t.html">wiced_bt_mesh_location_global_data_t</a>) and the Local Location Data (see <a class="el" href="structwiced__bt__mesh__location__local__data__t.html">wiced_bt_mesh_location_local_data_t</a>).</p>
 <p>On startup the application should call the wiced_bt_mesh_model_location_server_init function providing the callback to be executed when a Get or Set request is received from a mesh device. The application should call the wiced_bt_mesh_model_location_server_send function in response to a get request, a set request when reply is required or when application logic requires location information to be sent out. In the latter case the message will be sent out only if device is configured remotely with the destination address where the location status should be set to and and the application key to be used to secure the message. </p>

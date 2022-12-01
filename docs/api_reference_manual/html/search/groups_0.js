@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ble_20mesh',['BLE Mesh',['../group__wiced__bt__mesh.html',1,'']]]
+  ['le_20mesh',['LE Mesh',['../group__wiced__bt__mesh.html',1,'']]]
 ];

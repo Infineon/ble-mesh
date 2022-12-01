@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['data',['data',['../structwiced__bt__mesh__core__config__sensor__t.html#a53b2c1ff1526b0cf2dd1b68d9d9a20de',1,'wiced_bt_mesh_core_config_sensor_t::data()'],['../structwiced__bt__mesh__provisioning__record__response__t.html#a362dc6e08c006a91707768ec1ffa8770',1,'wiced_bt_mesh_provisioning_record_response_t::data()'],['../structwiced__bt__mesh__provision__inbound__pdu__report__data__t.html#a7907bfd004cc93197f5b00806063c79f',1,'wiced_bt_mesh_provision_inbound_pdu_report_data_t::data()']]],
+  ['data',['data',['../structwiced__bt__mesh__core__config__sensor__t.html#a53b2c1ff1526b0cf2dd1b68d9d9a20de',1,'wiced_bt_mesh_core_config_sensor_t::data()'],['../structwiced__bt__mesh__provision__inbound__pdu__report__data__t.html#a7907bfd004cc93197f5b00806063c79f',1,'wiced_bt_mesh_provision_inbound_pdu_report_data_t::data()']]],
   ['data_5flen',['data_len',['../structwiced__bt__mesh__event__t.html#abbd2dfc1bcdd10e4541810ed97b35769',1,'wiced_bt_mesh_event_t']]],
   ['day',['day',['../structwiced__bt__mesh__scheduler__action__data__t.html#a825153de0c18eb48c41f8fb2d3a6ddc0',1,'wiced_bt_mesh_scheduler_action_data_t']]],
   ['day_5fof_5fweek',['day_of_week',['../structwiced__bt__mesh__scheduler__action__data__t.html#a4117281fa9a5a5c7196bf75946f9cf32',1,'wiced_bt_mesh_scheduler_action_data_t']]],

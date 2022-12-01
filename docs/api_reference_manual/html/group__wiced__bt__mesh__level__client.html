@@ -90,11 +90,11 @@ $(document).ready(function(){initNavTree('group__wiced__bt__mesh__level__client.
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Mesh Level Client<div class="ingroups"><a class="el" href="group__wiced__bt__mesh.html">BLE Mesh</a> &raquo; <a class="el" href="group__wiced__bt__mesh__models.html">Mesh Models Library API</a></div></div>  </div>
+<div class="title">Mesh Level Client<div class="ingroups"><a class="el" href="group__wiced__bt__mesh.html">LE Mesh</a> &raquo; <a class="el" href="group__wiced__bt__mesh__models.html">Mesh Models Library API</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">General Description</h2>
-<p>The WICED Mesh Level Client module of the Mesh Models library provides a way for an application to send Level commands (set, delta and move) to the server and optionally receive status information. </p>
+<p>The AIROC Mesh Level Client module of the Mesh Models library provides a way for an application to send Level commands (set, delta and move) to the server and optionally receive status information. </p>
 <p>The module can be used in an implementation of a simple slider device.</p>
 <p>To include Level functionality, the device description shall contain <a class="el" href="group__wiced__bt__mesh__models.html#ga4665d11891c8413d0722fbbf4de91927">WICED_BT_MESH_MODEL_LEVEL_CLIENT</a>. To implement a device which supports multiple sliders, the <a class="el" href="group__wiced__bt__mesh__models.html#ga4665d11891c8413d0722fbbf4de91927">WICED_BT_MESH_MODEL_LEVEL_CLIENT</a> shall be included in multiple elements. Based on this information, the device that performs configuration will be able to specify different destination for different sliders supported by the device.</p>
 <p>There are three controlling methods which can be used depending on the application. The device which remembers its state (for example, the current level), can use Level Set command. The device which does not remember the state but knows how much the level is being changed can use Delta Set command. The device which can detect speed of the change can use Move Set command.</p>

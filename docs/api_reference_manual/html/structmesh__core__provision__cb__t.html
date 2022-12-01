@@ -89,7 +89,7 @@ $(document).ready(function(){initNavTree('structmesh__core__provision__cb__t.htm
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">mesh_core_provision_cb_t Struct Reference<div class="ingroups"><a class="el" href="group__wiced__bt__mesh.html">BLE Mesh</a> &raquo; <a class="el" href="group__wiced__bt__mesh__core.html">Mesh Core Library API</a></div></div>  </div>
+<div class="title">mesh_core_provision_cb_t Struct Reference<div class="ingroups"><a class="el" href="group__wiced__bt__mesh.html">LE Mesh</a> &raquo; <a class="el" href="group__wiced__bt__mesh__core.html">Mesh Core Library API</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Description</h2>
@@ -115,7 +115,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="s
 <tr class="separator:abb0a43c47c0476a2b8d06150140b5841"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c935328e943b767d5ebfb0b728552e3"><td class="memItemLeft" align="right" valign="top"><a id="a2c935328e943b767d5ebfb0b728552e3"></a>
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmesh__core__provision__cb__t.html#a2c935328e943b767d5ebfb0b728552e3">client_pdu_sent</a></td></tr>
-<tr class="memdesc:a2c935328e943b767d5ebfb0b728552e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">TRUE(&gt;0) during the time when RPR client is senfing PDU to the provisioning node. <br /></td></tr>
+<tr class="memdesc:a2c935328e943b767d5ebfb0b728552e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">TRUE(&gt;0) during the time when RPR client is sending PDU to the provisioning node. <br /></td></tr>
 <tr class="separator:a2c935328e943b767d5ebfb0b728552e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46b423afdf468142d0ff7e19bca4a932"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmesh__core__provision__cb__t.html#a46b423afdf468142d0ff7e19bca4a932">pb_type</a></td></tr>
 <tr class="memdesc:a46b423afdf468142d0ff7e19bca4a932"><td class="mdescLeft">&#160;</td><td class="mdescRight">type of the provisioning.  <a href="#a46b423afdf468142d0ff7e19bca4a932">More...</a><br /></td></tr>
@@ -161,9 +161,9 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>session_key</b> [<
 <tr class="memitem:af1bd305aad9de915c76536e9056ec20b"><td class="memItemLeft" align="right" valign="top"><a id="af1bd305aad9de915c76536e9056ec20b"></a>
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>random</b> [WICED_BT_MESH_PROVISION_RANDOM_LEN *2]</td></tr>
 <tr class="separator:af1bd305aad9de915c76536e9056ec20b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab25e0ed877310ce09bd6a6bf83134905"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmesh__core__provision__cb__t.html#ab25e0ed877310ce09bd6a6bf83134905">oob_value</a> [16]</td></tr>
-<tr class="memdesc:ab25e0ed877310ce09bd6a6bf83134905"><td class="mdescLeft">&#160;</td><td class="mdescRight">max static OOB value len is 256 bits(16bytes).  <a href="#ab25e0ed877310ce09bd6a6bf83134905">More...</a><br /></td></tr>
-<tr class="separator:ab25e0ed877310ce09bd6a6bf83134905"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca53ad52eedebf257f1c24823baa98d4"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmesh__core__provision__cb__t.html#aca53ad52eedebf257f1c24823baa98d4">oob_value</a> [32]</td></tr>
+<tr class="memdesc:aca53ad52eedebf257f1c24823baa98d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">max static OOB value len is 256 bits(32bytes).  <a href="#aca53ad52eedebf257f1c24823baa98d4">More...</a><br /></td></tr>
+<tr class="separator:aca53ad52eedebf257f1c24823baa98d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c1a395e7803c8d5e6460c4a9107aa0a"><td class="memItemLeft" align="right" valign="top"><a id="a3c1a395e7803c8d5e6460c4a9107aa0a"></a>
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmesh__core__provision__cb__t.html#a3c1a395e7803c8d5e6460c4a9107aa0a">oob_value_len</a></td></tr>
 <tr class="memdesc:a3c1a395e7803c8d5e6460c4a9107aa0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">length of the OOB value <br /></td></tr>
@@ -172,6 +172,9 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="s
 uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmesh__core__provision__cb__t.html#abadbd73da856974583b451a993b3566e">net_key_idx</a></td></tr>
 <tr class="memdesc:abadbd73da856974583b451a993b3566e"><td class="mdescLeft">&#160;</td><td class="mdescRight">NetKeyIdx provisioned. <br /></td></tr>
 <tr class="separator:abadbd73da856974583b451a993b3566e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e033534d6889d2367b3fce39132081f"><td class="memItemLeft" align="right" valign="top"><a id="a0e033534d6889d2367b3fce39132081f"></a>
+<a class="el" href="structwiced__bt__mesh__core__precord__descriptor__t.html">wiced_bt_mesh_core_precord_descriptor_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_prov_record_descriptor</b></td></tr>
+<tr class="separator:a0e033534d6889d2367b3fce39132081f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Field Documentation</h2>
 <a id="a46b423afdf468142d0ff7e19bca4a932"></a>
@@ -191,19 +194,19 @@ uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 
 </div>
 </div>
-<a id="ab25e0ed877310ce09bd6a6bf83134905"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab25e0ed877310ce09bd6a6bf83134905">&#9670;&nbsp;</a></span>oob_value</h2>
+<a id="aca53ad52eedebf257f1c24823baa98d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca53ad52eedebf257f1c24823baa98d4">&#9670;&nbsp;</a></span>oob_value</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t mesh_core_provision_cb_t::oob_value[16]</td>
+          <td class="memname">uint8_t mesh_core_provision_cb_t::oob_value[32]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>max static OOB value len is 256 bits(16bytes). </p>
+<p>max static OOB value len is 256 bits(32bytes). </p>
 <p>Max input and output OOB value length is 8 bytes </p>
 
 </div>

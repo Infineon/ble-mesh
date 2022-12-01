@@ -6,8 +6,7 @@ var searchData=
   ['fault_5ftest_5fcb',['fault_test_cb',['../structwiced__bt__mesh__core__init__t.html#a827b47be463050cfc2e58ce511497877',1,'wiced_bt_mesh_core_init_t']]],
   ['flags',['flags',['../structwiced__bt__mesh__core__state__beacon__t.html#ac7d5e383623a41f14d035760508eb16e',1,'wiced_bt_mesh_core_state_beacon_t']]],
   ['floor_5fnumber',['floor_number',['../structwiced__bt__mesh__location__local__data__t.html#ad89a5e6a4d5ddeb0a427f764f6b4d709',1,'wiced_bt_mesh_location_local_data_t']]],
-  ['fragment_5fmax_5fsize',['fragment_max_size',['../structwiced__bt__mesh__provisioning__record__request__t.html#a614bbbef3d5b513a57ff0f3de5356c32',1,'wiced_bt_mesh_provisioning_record_request_t']]],
-  ['fragment_5foffset',['fragment_offset',['../structwiced__bt__mesh__provisioning__record__request__t.html#a751ebac305bb7f6c066fa523a482b123',1,'wiced_bt_mesh_provisioning_record_request_t::fragment_offset()'],['../structwiced__bt__mesh__provisioning__record__response__t.html#ab1fccb7272f5c7eec040511d8c33609a',1,'wiced_bt_mesh_provisioning_record_response_t::fragment_offset()']]],
+  ['fragment_5foffset',['fragment_offset',['../structwiced__bt__mesh__provision__device__record__fragment__data__t.html#aad414a344d927094a904254e62968b9a',1,'wiced_bt_mesh_provision_device_record_fragment_data_t']]],
   ['friend_5faddr',['friend_addr',['../structwiced__bt__mesh__event__t.html#a0c8c027d3c869e69edf90d6a2fcfe003',1,'wiced_bt_mesh_event_t']]],
   ['frnd',['frnd',['../unionwiced__bt__mesh__core__state__t.html#acc9e9f857bee2964febd3e513a5babd3',1,'wiced_bt_mesh_core_state_t']]]
 ];

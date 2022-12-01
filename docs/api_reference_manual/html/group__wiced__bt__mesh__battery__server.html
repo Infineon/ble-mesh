@@ -91,11 +91,11 @@ $(document).ready(function(){initNavTree('group__wiced__bt__mesh__battery__serve
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Mesh Battery Server<div class="ingroups"><a class="el" href="group__wiced__bt__mesh.html">BLE Mesh</a> &raquo; <a class="el" href="group__wiced__bt__mesh__models.html">Mesh Models Library API</a></div></div>  </div>
+<div class="title">Mesh Battery Server<div class="ingroups"><a class="el" href="group__wiced__bt__mesh.html">LE Mesh</a> &raquo; <a class="el" href="group__wiced__bt__mesh__models.html">Mesh Models Library API</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">General Description</h2>
-<p>The WICED Mesh Battery Server module provides a way for a client to retrieve the Battery status of this device. </p>
+<p>The AIROC Mesh Battery Server module provides a way for a client to retrieve the Battery status of this device. </p>
 <p>The Server Model can also be configured by a Provisioner to allow sending the Status message to a specific node or group of nodes.</p>
 <p>On startup the application should call wiced_bt_mesh_model_battery_server_init function providing the callback that will be called when a request for the battery status is received. The application should call the wiced_bt_mesh_battery_server_send_status function in response to a get request, or when application logic requires battery status to be sent out. In the latter case the message will be sent out only if device is configured remotely with the destination address where the battery status should be sent to and the application key to be used to secure the message. </p>
 <table class="memberdecls">

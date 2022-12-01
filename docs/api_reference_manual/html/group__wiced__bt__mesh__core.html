@@ -94,13 +94,13 @@ $(document).ready(function(){initNavTree('group__wiced__bt__mesh__core.html','')
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">Mesh Core Library API<div class="ingroups"><a class="el" href="group__wiced__bt__mesh.html">BLE Mesh</a></div></div>  </div>
+<div class="title">Mesh Core Library API<div class="ingroups"><a class="el" href="group__wiced__bt__mesh.html">LE Mesh</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">General Description</h2>
-<p>Mesh Core library of the WICED SDK provide a simple method for an application to integrate Bluetooth Mesh functionality. </p>
-<p>Mesh Core library of the WICED SDK provides access to the BLE Mesh Core.</p>
-<p>Typically application will not access BLE Mesh Core directly but through the BLE Mesh Models library functions. </p>
+<p>Mesh Core library of the AIROC BTSDK provide a simple method for an application to integrate Bluetooth Mesh functionality. </p>
+<p>Mesh Core library of the AIROC BTSDK provides access to the LE Mesh Core.</p>
+<p>Typically application will not access LE Mesh Core directly but through the LE Mesh Models library functions. </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -151,20 +151,20 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwiced__bt__mesh__core__init__t.html">wiced_bt_mesh_core_init_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data for wiced_bt_mesh_core_init.  <a href="structwiced__bt__mesh__core__init__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwiced__bt__mesh__core__hal__api__t.html">wiced_bt_mesh_core_hal_api_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">hal api for <a class="el" href="group__wiced__bt__mesh__core.html#ga614041f855c21e8a06110b88d8b6a8b3" title="Sets hal api.">wiced_bt_mesh_core_set_hal_api()</a> Application has to implement all these functions and call <a class="el" href="group__wiced__bt__mesh__core.html#ga614041f855c21e8a06110b88d8b6a8b3" title="Sets hal api.">wiced_bt_mesh_core_set_hal_api()</a> at the startup.  <a href="structwiced__bt__mesh__core__hal__api__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwiced__bt__mesh__core__provision__capabilities__t.html">wiced_bt_mesh_core_provision_capabilities_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines Capabilities data of the provisioning device.  <a href="structwiced__bt__mesh__core__provision__capabilities__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwiced__bt__mesh__core__provision__start__t.html">wiced_bt_mesh_core_provision_start_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines Start data sent by Provisioner to the provisioning device.  <a href="structwiced__bt__mesh__core__provision__start__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwiced__bt__mesh__core__precord__descriptor__t.html">wiced_bt_mesh_core_precord_descriptor_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provisioning Records Handler Descriptor.  <a href="structwiced__bt__mesh__core__precord__descriptor__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmesh__core__provision__cb__t.html">mesh_core_provision_cb_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mesh Core Provisioning Control Block.  <a href="structmesh__core__provision__cb__t.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwiced__bt__mesh__provisioning__record__request__t.html">wiced_bt_mesh_provisioning_record_request_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provisioning Record Request PDU parameters format.  <a href="structwiced__bt__mesh__provisioning__record__request__t.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwiced__bt__mesh__provisioning__record__response__t.html">wiced_bt_mesh_provisioning_record_response_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provisioning Record Response PDU parameters format.  <a href="structwiced__bt__mesh__provisioning__record__response__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwiced__bt__mesh__core__statistics__t.html">wiced_bt_mesh_core_statistics_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents statistics of messages receiving, sending and handling by network and bearers layers.  <a href="structwiced__bt__mesh__core__statistics__t.html#details">More...</a><br /></td></tr>
@@ -192,6 +192,9 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#ga042faf26c6c7b6a50bc20b8a123b0ffb">WICED_BT_MESH_KEY_LEN</a>&#160;&#160;&#160;16</td></tr>
 <tr class="memdesc:ga042faf26c6c7b6a50bc20b8a123b0ffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of the mesh keys. <br /></td></tr>
 <tr class="separator:ga042faf26c6c7b6a50bc20b8a123b0ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae69d7fc6f257c67f4eba69e0c676389f"><td class="memItemLeft" align="right" valign="top"><a id="gae69d7fc6f257c67f4eba69e0c676389f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WICED_BT_MESH_PROVISIONING_RECORD_BUFF_MAX_SIZE</b>&#160;&#160;&#160;WICED_BT_MESH_PROVISION_PUBLIC_KEY_LEN</td></tr>
+<tr class="separator:gae69d7fc6f257c67f4eba69e0c676389f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga67e25e65da99bc809be2898aa4c7132e"><td class="memItemLeft" align="right" valign="top"><a id="ga67e25e65da99bc809be2898aa4c7132e"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>WICED_BT_MESH_CORE_TRACE_FID_MESH_DISCOVERY</b>&#160;&#160;&#160;0x00000002</td></tr>
 <tr class="separator:ga67e25e65da99bc809be2898aa4c7132e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -435,9 +438,6 @@ struct {</td></tr>
 &#160;&#160;&#160;uint16_t&#160;&#160;&#160;<b>vendor_id</b></td></tr>
 <tr class="memdesc:aa61d9c134c4531ff4558d088dcb563e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vendor-assigned product version identifier. <br /></td></tr>
 <tr class="separator:aa61d9c134c4531ff4558d088dcb563e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a211f5735e98d43b594e958b1c4264327"><td class="memItemLeft" >&#160;&#160;&#160;uint16_t&#160;&#160;&#160;<b>replay_cache_size</b></td></tr>
-<tr class="memdesc:a211f5735e98d43b594e958b1c4264327"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of replay protection entries, i.e.  <a href="#a211f5735e98d43b594e958b1c4264327">More...</a><br /></td></tr>
-<tr class="separator:a211f5735e98d43b594e958b1c4264327"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a294af5eabfc78d9487f3f122c6142e93"><td class="memItemLeft" >
 &#160;&#160;&#160;uint16_t&#160;&#160;&#160;<b>features</b></td></tr>
 <tr class="memdesc:a294af5eabfc78d9487f3f122c6142e93"><td class="mdescLeft">&#160;</td><td class="mdescRight">A bit field indicating the device features (see <a class="el" href="group__wiced__bt__mesh__core.html#BT_MESH_CORE_FEATURE">Supported features bitmap</a>) <br /></td></tr>
@@ -614,9 +614,111 @@ struct {</td></tr>
 <tr class="memitem:ga7e836935d4b995497b01a907cc887868"><td class="memItemLeft" align="right" valign="top"><a id="ga7e836935d4b995497b01a907cc887868"></a>
 typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>wiced_bt_mesh_core_state_changed_callback_t</b>) (<a class="el" href="group__wiced__bt__mesh__core.html#ga02a9c4bb1051423c260e310edba3503b">wiced_bt_mesh_core_state_type_t</a> type, <a class="el" href="unionwiced__bt__mesh__core__state__t.html">wiced_bt_mesh_core_state_t</a> *p_state)</td></tr>
 <tr class="separator:ga7e836935d4b995497b01a907cc887868"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga029e8aebb27e8d4a9088a4b11fcce246"><td class="memItemLeft" align="right" valign="top">typedef wiced_bool_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#ga029e8aebb27e8d4a9088a4b11fcce246">wiced_bt_mesh_core_adv_send_cb_t</a>) (uint8_t instance, uint8_t transmissions, uint32_t interval, uint8_t type, uint8_t *own_bd_addr, const uint8_t *adv_data, uint8_t adv_data_len, const uint8_t *scan_rsp_data, uint8_t scan_rsp_data_len)</td></tr>
+<tr class="memdesc:ga029e8aebb27e8d4a9088a4b11fcce246"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of the callback function to send advert messages or stop sending it or reset all adverts.  <a href="#ga029e8aebb27e8d4a9088a4b11fcce246">More...</a><br /></td></tr>
+<tr class="separator:ga029e8aebb27e8d4a9088a4b11fcce246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa3e49a2dc4626402aa6001fe9620a5b8"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#gaa3e49a2dc4626402aa6001fe9620a5b8">wiced_bt_mesh_core_hal_rand_gen_num_array_t</a>) (uint32_t *randNumberArrayPtr, uint32_t length)</td></tr>
+<tr class="memdesc:gaa3e49a2dc4626402aa6001fe9620a5b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills a given array with randomly generated 32-bit integers.  <a href="#gaa3e49a2dc4626402aa6001fe9620a5b8">More...</a><br /></td></tr>
+<tr class="separator:gaa3e49a2dc4626402aa6001fe9620a5b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ff5534132da3ed051b729e66edd6379"><td class="memItemLeft" align="right" valign="top">typedef uint32_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#ga0ff5534132da3ed051b729e66edd6379">wiced_bt_mesh_core_hal_get_pseudo_rand_number_t</a>) (void)</td></tr>
+<tr class="memdesc:ga0ff5534132da3ed051b729e66edd6379"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functin returns a pseudo random number.  <a href="#ga0ff5534132da3ed051b729e66edd6379">More...</a><br /></td></tr>
+<tr class="separator:ga0ff5534132da3ed051b729e66edd6379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga752f79974790268e4e5af5e4516ea7aa"><td class="memItemLeft" align="right" valign="top">typedef uint32_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#ga752f79974790268e4e5af5e4516ea7aa">wiced_bt_mesh_core_hal_rand_gen_num_t</a>) (void)</td></tr>
+<tr class="memdesc:ga752f79974790268e4e5af5e4516ea7aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates and returns a random 32-bit integer.  <a href="#ga752f79974790268e4e5af5e4516ea7aa">More...</a><br /></td></tr>
+<tr class="separator:ga752f79974790268e4e5af5e4516ea7aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7ef977434be734c8cb8ecb0702959400"><td class="memItemLeft" align="right" valign="top"><a id="ga7ef977434be734c8cb8ecb0702959400"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#ga7ef977434be734c8cb8ecb0702959400">wiced_bt_mesh_core_hal_wdog_reset_system_t</a>) (void)</td></tr>
+<tr class="memdesc:ga7ef977434be734c8cb8ecb0702959400"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a soft reset of the system. <br /></td></tr>
+<tr class="separator:ga7ef977434be734c8cb8ecb0702959400"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad1209c42aa9f4f39124aecda34281817"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#gad1209c42aa9f4f39124aecda34281817">wiced_bt_mesh_core_hal_delete_nvram_t</a>) (uint16_t vs_id, wiced_result_t *p_status)</td></tr>
+<tr class="memdesc:gad1209c42aa9f4f39124aecda34281817"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes data from NVRAM at specified VS id  <a href="#gad1209c42aa9f4f39124aecda34281817">More...</a><br /></td></tr>
+<tr class="separator:gad1209c42aa9f4f39124aecda34281817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab35ec1c11bcbed428c83fe63f2375f8c"><td class="memItemLeft" align="right" valign="top">typedef uint16_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#gab35ec1c11bcbed428c83fe63f2375f8c">wiced_bt_mesh_core_hal_write_nvram_t</a>) (uint16_t vs_id, uint16_t data_length, uint8_t *p_data, wiced_result_t *p_status)</td></tr>
+<tr class="memdesc:gab35ec1c11bcbed428c83fe63f2375f8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the data to NVRAM, Application can write up to 255 bytes in one VS id section.  <a href="#gab35ec1c11bcbed428c83fe63f2375f8c">More...</a><br /></td></tr>
+<tr class="separator:gab35ec1c11bcbed428c83fe63f2375f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab555f24ead6112b89d4de338e79e6b4a"><td class="memItemLeft" align="right" valign="top">typedef uint16_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#gab555f24ead6112b89d4de338e79e6b4a">wiced_bt_mesh_core_hal_read_nvram_t</a>) (uint16_t vs_id, uint16_t data_length, uint8_t *p_data, wiced_result_t *p_status)</td></tr>
+<tr class="memdesc:gab555f24ead6112b89d4de338e79e6b4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the data from NVRAM.  <a href="#gab555f24ead6112b89d4de338e79e6b4a">More...</a><br /></td></tr>
+<tr class="separator:gab555f24ead6112b89d4de338e79e6b4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga649029885402c5995c38669566887f51"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#ga649029885402c5995c38669566887f51">wiced_bt_mesh_core_hal_aes_encrypt_t</a>) (uint8_t *in_data, uint8_t *out_data, uint8_t *key)</td></tr>
+<tr class="memdesc:ga649029885402c5995c38669566887f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate AES encryption by using Hardware acceleration.  <a href="#ga649029885402c5995c38669566887f51">More...</a><br /></td></tr>
+<tr class="separator:ga649029885402c5995c38669566887f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac19ccef557a6668b64e41e6602118e94"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#gac19ccef557a6668b64e41e6602118e94">wiced_bt_mesh_core_send_complete_callback_t</a>) (<a class="el" href="structwiced__bt__mesh__event__t.html">wiced_bt_mesh_event_t</a> *p_event)</td></tr>
 <tr class="memdesc:gac19ccef557a6668b64e41e6602118e94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send message complete callback.  <a href="#gac19ccef557a6668b64e41e6602118e94">More...</a><br /></td></tr>
 <tr class="separator:gac19ccef557a6668b64e41e6602118e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0bf523014eebfbd43c27aa6ac18d7d21"><td class="memItemLeft" ><a id="ga0bf523014eebfbd43c27aa6ac18d7d21"></a>
+struct {</td></tr>
+<tr class="memitem:aa07b571f29b5a3fa06f98ddb030b88bb"><td class="memItemLeft" >
+&#160;&#160;&#160;uint16_t&#160;&#160;&#160;<b>extensions</b></td></tr>
+<tr class="memdesc:aa07b571f29b5a3fa06f98ddb030b88bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitmask indicating the provisioning extensions supported by the device. <br /></td></tr>
+<tr class="separator:aa07b571f29b5a3fa06f98ddb030b88bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af945b22041578b23ab3fee3e0016b5fd"><td class="memItemLeft" >
+&#160;&#160;&#160;uint16_t&#160;&#160;&#160;<b>list</b> [WICED_BT_MESH_PROVISIONING_RECORD_ID_MAX_SIZE]</td></tr>
+<tr class="memdesc:af945b22041578b23ab3fee3e0016b5fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lists the Record IDs of the provisioning records stored on the device. <br /></td></tr>
+<tr class="separator:af945b22041578b23ab3fee3e0016b5fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a322e5e76531d80a7ab6360d9cc13a9bd"><td class="memItemLeft" >
+&#160;&#160;&#160;uint16_t&#160;&#160;&#160;<b>list_size</b></td></tr>
+<tr class="memdesc:a322e5e76531d80a7ab6360d9cc13a9bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">sizes of the record data in the list <br /></td></tr>
+<tr class="separator:a322e5e76531d80a7ab6360d9cc13a9bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0bf523014eebfbd43c27aa6ac18d7d21"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><b>wiced_bt_mesh_core_provisioning_list_t</b></td></tr>
+<tr class="separator:ga0bf523014eebfbd43c27aa6ac18d7d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7aba14d11288be819669b3247e46da29"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:a084d542dc5dcbfb4e1b23bcfabeb54ec"><td class="memItemLeft" >
+&#160;&#160;&#160;uint16_t&#160;&#160;&#160;<b>record_id</b></td></tr>
+<tr class="memdesc:a084d542dc5dcbfb4e1b23bcfabeb54ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifies the provisioning record for which the request is made. <br /></td></tr>
+<tr class="separator:a084d542dc5dcbfb4e1b23bcfabeb54ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af96ca840fb6c7884634a656da291320b"><td class="memItemLeft" >
+&#160;&#160;&#160;uint16_t&#160;&#160;&#160;<b>fragment_offset</b></td></tr>
+<tr class="memdesc:af96ca840fb6c7884634a656da291320b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The starting offset of the requested fragment in the provisioning record data. <br /></td></tr>
+<tr class="separator:af96ca840fb6c7884634a656da291320b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a188745daa0fb4050e906f6b55572d469"><td class="memItemLeft" >
+&#160;&#160;&#160;uint16_t&#160;&#160;&#160;<b>fragment_max_size</b></td></tr>
+<tr class="memdesc:a188745daa0fb4050e906f6b55572d469"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum size of the provisioning record fragment that the provisioner can receive. <br /></td></tr>
+<tr class="separator:a188745daa0fb4050e906f6b55572d469"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7aba14d11288be819669b3247e46da29"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#ga7aba14d11288be819669b3247e46da29">wiced_bt_mesh_core_provisioning_record_request_t</a></td></tr>
+<tr class="memdesc:ga7aba14d11288be819669b3247e46da29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provisioning Record Request PDU parameters format.  <a href="#ga7aba14d11288be819669b3247e46da29">More...</a><br /></td></tr>
+<tr class="separator:ga7aba14d11288be819669b3247e46da29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0a5a3c6a060c5dfce60746e0094ba968"><td class="memItemLeft" ><a id="ga0a5a3c6a060c5dfce60746e0094ba968"></a>
+struct {</td></tr>
+<tr class="memitem:aede47c84e0d475029e4472ea82df4f09"><td class="memItemLeft" >
+&#160;&#160;&#160;uint16_t&#160;&#160;&#160;<b>record_id</b></td></tr>
+<tr class="memdesc:aede47c84e0d475029e4472ea82df4f09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifies the provisioning record whose data fragment is sent in the response. <br /></td></tr>
+<tr class="separator:aede47c84e0d475029e4472ea82df4f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52073c47b6fb3e953abdc6626dcf1cec"><td class="memItemLeft" >
+&#160;&#160;&#160;uint16_t&#160;&#160;&#160;<b>fragment_offset</b></td></tr>
+<tr class="memdesc:a52073c47b6fb3e953abdc6626dcf1cec"><td class="mdescLeft">&#160;</td><td class="mdescRight">The starting offset of the data fragment in the provisioning record data. <br /></td></tr>
+<tr class="separator:a52073c47b6fb3e953abdc6626dcf1cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accec24d53fddc753cb20aa46b687590d"><td class="memItemLeft" >
+&#160;&#160;&#160;uint16_t&#160;&#160;&#160;<b>total_length</b></td></tr>
+<tr class="memdesc:accec24d53fddc753cb20aa46b687590d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total length of the provisioning record data stored on the device. <br /></td></tr>
+<tr class="separator:accec24d53fddc753cb20aa46b687590d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0a5a3c6a060c5dfce60746e0094ba968"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><b>wiced_bt_mesh_core_provisioning_record_response_t</b></td></tr>
+<tr class="separator:ga0a5a3c6a060c5dfce60746e0094ba968"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga34b96a5d8887dc3b1003625ac91a1420"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:af9218c0516fb4a11d71a316ac9af4b9d"><td class="memItemLeft" >
+&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<b>status</b></td></tr>
+<tr class="memdesc:af9218c0516fb4a11d71a316ac9af4b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the request was handled successfully. <br /></td></tr>
+<tr class="separator:af9218c0516fb4a11d71a316ac9af4b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e306cf2411591f19272273187e9a3bf"><td class="memItemLeft" >
+&#160;&#160;&#160;union {</td></tr>
+<tr class="memitem:ad391f7fd927749c3b02f7de84df488a3"><td class="memItemLeft" >
+&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="group__wiced__bt__mesh__core.html#ga7aba14d11288be819669b3247e46da29">wiced_bt_mesh_core_provisioning_record_request_t</a>&#160;&#160;&#160;<b>request</b></td></tr>
+<tr class="separator:ad391f7fd927749c3b02f7de84df488a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe4f66653fca775c15072f2abd73f454"><td class="memItemLeft" >
+&#160;&#160;&#160;&#160;&#160;&#160;wiced_bt_mesh_core_provisioning_record_response_t&#160;&#160;&#160;<b>response</b></td></tr>
+<tr class="separator:abe4f66653fca775c15072f2abd73f454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e306cf2411591f19272273187e9a3bf"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<b>u</b></td></tr>
+<tr class="separator:a2e306cf2411591f19272273187e9a3bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef5053134409f7de884e1b1a4f799abc"><td class="memItemLeft" >
+&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<b>data</b> [WICED_BT_MESH_PROVISIONING_RECORD_BUFF_MAX_SIZE]</td></tr>
+<tr class="memdesc:aef5053134409f7de884e1b1a4f799abc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provisioning record data fragment (Optional) <br /></td></tr>
+<tr class="separator:aef5053134409f7de884e1b1a4f799abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58519dc92079bcd6feb1860f6898675a"><td class="memItemLeft" >
+&#160;&#160;&#160;uint16_t&#160;&#160;&#160;<b>size</b></td></tr>
+<tr class="memdesc:a58519dc92079bcd6feb1860f6898675a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of valid data in the record fragment. <br /></td></tr>
+<tr class="separator:a58519dc92079bcd6feb1860f6898675a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga34b96a5d8887dc3b1003625ac91a1420"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#ga34b96a5d8887dc3b1003625ac91a1420">wiced_bt_mesh_core_provisioning_record_t</a></td></tr>
+<tr class="memdesc:ga34b96a5d8887dc3b1003625ac91a1420"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provisioning Record Response PDU parameters format.  <a href="#ga34b96a5d8887dc3b1003625ac91a1420">More...</a><br /></td></tr>
+<tr class="separator:ga34b96a5d8887dc3b1003625ac91a1420"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga43bee1d162368064660d2ab5e9666efb"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#ga43bee1d162368064660d2ab5e9666efb">wiced_bt_mesh_core_provision_gatt_send_cb_t</a>) (uint16_t conn_id, const uint8_t *packet, uint32_t packet_len)</td></tr>
 <tr class="memdesc:ga43bee1d162368064660d2ab5e9666efb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of the callback function to send provisioning packet.  <a href="#ga43bee1d162368064660d2ab5e9666efb">More...</a><br /></td></tr>
 <tr class="separator:ga43bee1d162368064660d2ab5e9666efb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -635,6 +737,12 @@ typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>wiced_bt_me
 <tr class="memitem:gacadfbca2d0c156759e5fe6ab5401d4d3"><td class="memItemLeft" align="right" valign="top">typedef wiced_bool_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#gacadfbca2d0c156759e5fe6ab5401d4d3">wiced_bt_mesh_core_provision_get_capabilities_cb_t</a>) (uint32_t conn_id)</td></tr>
 <tr class="memdesc:gacadfbca2d0c156759e5fe6ab5401d4d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of the callback function on get Capabilities.  <a href="#gacadfbca2d0c156759e5fe6ab5401d4d3">More...</a><br /></td></tr>
 <tr class="separator:gacadfbca2d0c156759e5fe6ab5401d4d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab238417382f333b820f54329e0586b84"><td class="memItemLeft" align="right" valign="top">typedef uint16_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#gab238417382f333b820f54329e0586b84">wiced_bt_mesh_core_provision_records_get_cb_t</a>) (uint16_t *buffer)</td></tr>
+<tr class="memdesc:gab238417382f333b820f54329e0586b84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of the callback function on get provisioning records list.  <a href="#gab238417382f333b820f54329e0586b84">More...</a><br /></td></tr>
+<tr class="separator:gab238417382f333b820f54329e0586b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0d4ec836d30498e00d79b50652b1af03"><td class="memItemLeft" align="right" valign="top">typedef uint16_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#ga0d4ec836d30498e00d79b50652b1af03">wiced_bt_mesh_core_provision_record_req_cb_t</a>) (uint16_t record_id, uint8_t *buffer, uint16_t fragment_length, uint16_t fragment_offset, uint16_t *record_size)</td></tr>
+<tr class="memdesc:ga0d4ec836d30498e00d79b50652b1af03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of the callback function on get fragment of the provisioning record.  <a href="#ga0d4ec836d30498e00d79b50652b1af03">More...</a><br /></td></tr>
+<tr class="separator:ga0d4ec836d30498e00d79b50652b1af03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga34c35d7877ab5180d9248af43f53a06a"><td class="memItemLeft" align="right" valign="top">typedef const uint8_t *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#ga34c35d7877ab5180d9248af43f53a06a">wiced_bt_mesh_core_get_dev_key_callback_t</a>) (uint16_t addr, uint16_t *p_net_key_idx)</td></tr>
 <tr class="memdesc:ga34c35d7877ab5180d9248af43f53a06a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device Key request callback.  <a href="#ga34c35d7877ab5180d9248af43f53a06a">More...</a><br /></td></tr>
 <tr class="separator:ga34c35d7877ab5180d9248af43f53a06a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -692,12 +800,24 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga614041f855c21e8a06110b88d8b6a8b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#ga614041f855c21e8a06110b88d8b6a8b3">wiced_bt_mesh_core_set_hal_api</a> (<a class="el" href="structwiced__bt__mesh__core__hal__api__t.html">wiced_bt_mesh_core_hal_api_t</a> *hal_api)</td></tr>
+<tr class="memdesc:ga614041f855c21e8a06110b88d8b6a8b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets hal api.  <a href="#ga614041f855c21e8a06110b88d8b6a8b3">More...</a><br /></td></tr>
+<tr class="separator:ga614041f855c21e8a06110b88d8b6a8b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga146e1f12905b85e28eaf54a11f74736d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structwiced__bt__mesh__core__hal__api__t.html">wiced_bt_mesh_core_hal_api_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#ga146e1f12905b85e28eaf54a11f74736d">wiced_bt_mesh_core_get_hal_api</a> (void)</td></tr>
+<tr class="memdesc:ga146e1f12905b85e28eaf54a11f74736d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns hal api.  <a href="#ga146e1f12905b85e28eaf54a11f74736d">More...</a><br /></td></tr>
+<tr class="separator:ga146e1f12905b85e28eaf54a11f74736d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1bd0d715179b13a0ccd5700a1bc67f55"><td class="memItemLeft" align="right" valign="top">wiced_result_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#ga1bd0d715179b13a0ccd5700a1bc67f55">wiced_bt_mesh_core_init</a> (<a class="el" href="structwiced__bt__mesh__core__init__t.html">wiced_bt_mesh_core_init_t</a> *p_init)</td></tr>
 <tr class="memdesc:ga1bd0d715179b13a0ccd5700a1bc67f55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mesh Core initialization.  <a href="#ga1bd0d715179b13a0ccd5700a1bc67f55">More...</a><br /></td></tr>
 <tr class="separator:ga1bd0d715179b13a0ccd5700a1bc67f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8d293a403925663b8b62400793ceba7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#ga8d293a403925663b8b62400793ceba7f">wiced_bt_mesh_core_deinit</a> (<a class="el" href="group__wiced__bt__mesh__core.html#ga99efb88f995edc91d84cdf29fd3c8eec">wiced_bt_core_nvram_access_t</a> nvram_access_callback)</td></tr>
-<tr class="memdesc:ga8d293a403925663b8b62400793ceba7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mesh Core de-initialization.  <a href="#ga8d293a403925663b8b62400793ceba7f">More...</a><br /></td></tr>
-<tr class="separator:ga8d293a403925663b8b62400793ceba7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga06764c4d3bde30e471ad4d37dbaad61b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#ga06764c4d3bde30e471ad4d37dbaad61b">wiced_bt_mesh_core_adv_end</a> (uint8_t instance)</td></tr>
+<tr class="memdesc:ga06764c4d3bde30e471ad4d37dbaad61b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advertisement stopped notification.  <a href="#ga06764c4d3bde30e471ad4d37dbaad61b">More...</a><br /></td></tr>
+<tr class="separator:ga06764c4d3bde30e471ad4d37dbaad61b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9637a1f85cea554caeae23f108d13eee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#ga9637a1f85cea554caeae23f108d13eee">wiced_bt_mesh_core_set_max_num_adv_instances</a> (uint8_t max_num)</td></tr>
+<tr class="memdesc:ga9637a1f85cea554caeae23f108d13eee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set max number of advertisement instances.  <a href="#ga9637a1f85cea554caeae23f108d13eee">More...</a><br /></td></tr>
+<tr class="separator:ga9637a1f85cea554caeae23f108d13eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6d1080ad7b0fab9ed96731674cb595b4"><td class="memItemLeft" align="right" valign="top">wiced_bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#ga6d1080ad7b0fab9ed96731674cb595b4">wiced_bt_mesh_core_deinit</a> (<a class="el" href="group__wiced__bt__mesh__core.html#ga99efb88f995edc91d84cdf29fd3c8eec">wiced_bt_core_nvram_access_t</a> nvram_access_callback)</td></tr>
+<tr class="memdesc:ga6d1080ad7b0fab9ed96731674cb595b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mesh Core de-initialization.  <a href="#ga6d1080ad7b0fab9ed96731674cb595b4">More...</a><br /></td></tr>
+<tr class="separator:ga6d1080ad7b0fab9ed96731674cb595b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga92f67a898aae84860ba54500f79c2e86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#ga92f67a898aae84860ba54500f79c2e86">wiced_bt_mesh_core_start</a> (void)</td></tr>
 <tr class="memdesc:ga92f67a898aae84860ba54500f79c2e86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mesh Core Start.  <a href="#ga92f67a898aae84860ba54500f79c2e86">More...</a><br /></td></tr>
 <tr class="separator:ga92f67a898aae84860ba54500f79c2e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -749,9 +869,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>wiced_bt_mesh_core_ca
 <tr class="memitem:ga919094b490285759f279ff88a8d230f1"><td class="memItemLeft" align="right" valign="top">wiced_bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#ga919094b490285759f279ff88a8d230f1">wiced_bt_mesh_core_health_set_faults</a> (uint8_t element_idx, uint8_t test_id, uint16_t company_id, uint8_t faults_number, uint8_t *fault_array)</td></tr>
 <tr class="memdesc:ga919094b490285759f279ff88a8d230f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates the fault happened.  <a href="#ga919094b490285759f279ff88a8d230f1">More...</a><br /></td></tr>
 <tr class="separator:ga919094b490285759f279ff88a8d230f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacc7311d144020069d287dc02c6a3a8e1"><td class="memItemLeft" align="right" valign="top">wiced_bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#gacc7311d144020069d287dc02c6a3a8e1">wiced_bt_mesh_core_provision_server_init</a> (uint8_t *priv_key, <a class="el" href="group__wiced__bt__mesh__core.html#gad13b2975a4c7c72f10176a76e0bae485">wiced_bt_mesh_core_provision_started_cb_t</a> started_cb, <a class="el" href="group__wiced__bt__mesh__core.html#ga1bc7c2cd6080f43f6a1c906a152512bc">wiced_bt_mesh_core_provision_end_cb_t</a> end_cb, <a class="el" href="group__wiced__bt__mesh__core.html#gacadfbca2d0c156759e5fe6ab5401d4d3">wiced_bt_mesh_core_provision_get_capabilities_cb_t</a> get_capabilities_cb, <a class="el" href="group__wiced__bt__mesh__core.html#ga31221dfe5c0ae14bae0e38f19206fe13">wiced_bt_mesh_core_provision_get_oob_cb_t</a> get_oob_cb, <a class="el" href="group__wiced__bt__mesh__core.html#ga43bee1d162368064660d2ab5e9666efb">wiced_bt_mesh_core_provision_gatt_send_cb_t</a> gatt_send_cb)</td></tr>
-<tr class="memdesc:gacc7311d144020069d287dc02c6a3a8e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes provisioning layer for the node(server side).  <a href="#gacc7311d144020069d287dc02c6a3a8e1">More...</a><br /></td></tr>
-<tr class="separator:gacc7311d144020069d287dc02c6a3a8e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadc2fc8dd605434fe8695ba43757f2319"><td class="memItemLeft" align="right" valign="top">wiced_bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#gadc2fc8dd605434fe8695ba43757f2319">wiced_bt_mesh_core_provision_server_init</a> (uint8_t *priv_key, <a class="el" href="group__wiced__bt__mesh__core.html#gad13b2975a4c7c72f10176a76e0bae485">wiced_bt_mesh_core_provision_started_cb_t</a> started_cb, <a class="el" href="group__wiced__bt__mesh__core.html#ga1bc7c2cd6080f43f6a1c906a152512bc">wiced_bt_mesh_core_provision_end_cb_t</a> end_cb, <a class="el" href="group__wiced__bt__mesh__core.html#gacadfbca2d0c156759e5fe6ab5401d4d3">wiced_bt_mesh_core_provision_get_capabilities_cb_t</a> get_capabilities_cb, <a class="el" href="group__wiced__bt__mesh__core.html#ga31221dfe5c0ae14bae0e38f19206fe13">wiced_bt_mesh_core_provision_get_oob_cb_t</a> get_oob_cb, <a class="el" href="group__wiced__bt__mesh__core.html#ga43bee1d162368064660d2ab5e9666efb">wiced_bt_mesh_core_provision_gatt_send_cb_t</a> gatt_send_cb, <a class="el" href="group__wiced__bt__mesh__core.html#gab238417382f333b820f54329e0586b84">wiced_bt_mesh_core_provision_records_get_cb_t</a> get_precords_cb, <a class="el" href="group__wiced__bt__mesh__core.html#ga0d4ec836d30498e00d79b50652b1af03">wiced_bt_mesh_core_provision_record_req_cb_t</a> request_precord_cb)</td></tr>
+<tr class="memdesc:gadc2fc8dd605434fe8695ba43757f2319"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes provisioning layer for the node(server side).  <a href="#gadc2fc8dd605434fe8695ba43757f2319">More...</a><br /></td></tr>
+<tr class="separator:gadc2fc8dd605434fe8695ba43757f2319"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf86b79fd4adb5961c8b1091a8dc00a55"><td class="memItemLeft" align="right" valign="top">wiced_bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#gaf86b79fd4adb5961c8b1091a8dc00a55">wiced_bt_mesh_core_provision_set_oob</a> (uint8_t *value, uint8_t value_len)</td></tr>
 <tr class="memdesc:gaf86b79fd4adb5961c8b1091a8dc00a55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets OOB in response on wiced_bt_mesh_provision_get_oob_cb.  <a href="#gaf86b79fd4adb5961c8b1091a8dc00a55">More...</a><br /></td></tr>
 <tr class="separator:gaf86b79fd4adb5961c8b1091a8dc00a55"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -788,6 +908,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>wiced_bt_mesh_core_ca
 <tr class="memitem:gafd2c62f6207d6351a615b9b81ad2a5c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#gafd2c62f6207d6351a615b9b81ad2a5c4">wiced_bt_mesh_core_transport_statistics_reset</a> (void)</td></tr>
 <tr class="memdesc:gafd2c62f6207d6351a615b9b81ad2a5c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets statistics of the transport layers.  <a href="#gafd2c62f6207d6351a615b9b81ad2a5c4">More...</a><br /></td></tr>
 <tr class="separator:gafd2c62f6207d6351a615b9b81ad2a5c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5aff6e03bdce12ed4dd24d93a8ff8d75"><td class="memItemLeft" align="right" valign="top"><a id="ga5aff6e03bdce12ed4dd24d93a8ff8d75"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>wiced_bt_mesh_core_execute_delayed_nvram_writes</b> (void)</td></tr>
+<tr class="separator:ga5aff6e03bdce12ed4dd24d93a8ff8d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafca0c177ae3dc8f57c806a04a24e2370"><td class="memItemLeft" align="right" valign="top">wiced_bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#gafca0c177ae3dc8f57c806a04a24e2370">wiced_bt_mesh_core_get_network_id</a> (uint16_t net_key_idx, uint8_t *network_id)</td></tr>
 <tr class="memdesc:gafca0c177ae3dc8f57c806a04a24e2370"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills buffer net_id with 8 bytes Network ID for net_key_idx.  <a href="#gafca0c177ae3dc8f57c806a04a24e2370">More...</a><br /></td></tr>
 <tr class="separator:gafca0c177ae3dc8f57c806a04a24e2370"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -821,6 +944,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>wiced_bt_mesh_core_ca
 <tr class="memitem:ga22380210a6e0d18c705961dcec9783ad"><td class="memItemLeft" align="right" valign="top">wiced_bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#ga22380210a6e0d18c705961dcec9783ad">wiced_bt_mesh_core_needs_composition_refresh</a> (void)</td></tr>
 <tr class="memdesc:ga22380210a6e0d18c705961dcec9783ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detects if Node Composition Refresh Procedure is needed.  <a href="#ga22380210a6e0d18c705961dcec9783ad">More...</a><br /></td></tr>
 <tr class="separator:ga22380210a6e0d18c705961dcec9783ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9984cd943cbef8ebc470165f6d33764a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#ga9984cd943cbef8ebc470165f6d33764a">wiced_bt_mesh_core_reset</a> (void)</td></tr>
+<tr class="memdesc:ga9984cd943cbef8ebc470165f6d33764a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets node to unprovisioned state without restarting.  <a href="#ga9984cd943cbef8ebc470165f6d33764a">More...</a><br /></td></tr>
+<tr class="separator:ga9984cd943cbef8ebc470165f6d33764a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8108b7a7f857f821b57c6469559db321"><td class="memItemLeft" align="right" valign="top">const uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#ga8108b7a7f857f821b57c6469559db321">wiced_bt_mesh_core_get_app_key</a> (uint16_t appkey_global_idx, wiced_bool_t newKeyAtKeyRefresh)</td></tr>
 <tr class="memdesc:ga8108b7a7f857f821b57c6469559db321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns pointer to the specific application key.  <a href="#ga8108b7a7f857f821b57c6469559db321">More...</a><br /></td></tr>
 <tr class="separator:ga8108b7a7f857f821b57c6469559db321"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -893,6 +1019,9 @@ uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>wiced_bt_mesh_cor
 <tr class="memitem:ga9a102696c9b2bbaf68cd58a5885f7fda"><td class="memItemLeft" align="right" valign="top"><a id="ga9a102696c9b2bbaf68cd58a5885f7fda"></a>
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>wiced_bt_mesh_core_adv_tx_power</b></td></tr>
 <tr class="separator:ga9a102696c9b2bbaf68cd58a5885f7fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac76ead3405e33dd3fa4f8844b1140558"><td class="memItemLeft" align="right" valign="top"><a id="gac76ead3405e33dd3fa4f8844b1140558"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>wiced_bt_mesh_core_write_config_delay</b></td></tr>
+<tr class="separator:gac76ead3405e33dd3fa4f8844b1140558"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga457c303574ad2fc3970319743c106c00"><td class="memItemLeft" align="right" valign="top">wiced_bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wiced__bt__mesh__core.html#ga457c303574ad2fc3970319743c106c00">wiced_bt_core_short_trans_mic</a></td></tr>
 <tr class="memdesc:ga457c303574ad2fc3970319743c106c00"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the value of that variable is WICED_TRUE then the transport layer always use 32-bit TransMIC.  <a href="#ga457c303574ad2fc3970319743c106c00">More...</a><br /></td></tr>
 <tr class="separator:ga457c303574ad2fc3970319743c106c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1298,7 +1427,9 @@ Mesh Provisioning Record IDs</h2></td></tr>
 <br />
 &#160;&#160;<b>WICED_BT_MESH_PROVISIONING_RECORD_ID_COMPLETE_LOCAL_NAME</b> = 0X0011, 
 <br />
-&#160;&#160;<b>WICED_BT_MESH_PROVISIONING_RECORD_ID_APPEARANCE</b> = 0x0012
+&#160;&#160;<b>WICED_BT_MESH_PROVISIONING_RECORD_ID_APPEARANCE</b> = 0x0012, 
+<br />
+&#160;&#160;<b>WICED_BT_MESH_PROVISIONING_RECORD_ID_MAX_SIZE</b> = 0x0013
 <br />
  }</td></tr>
 <tr class="separator:ga7a7550abb8c97b9043c64db42936cf65"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1307,7 +1438,7 @@ Mesh Provisioning Record IDs</h2></td></tr>
 Status codes for the Provisioning Record Response PDU</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrpa6c79b7d7b205818bca4a9dae043debe"></a><a class="anchor" id="WICED_BT_MESH_PROVISIONING_RECORD_RESPONSE_STATUS"></a></p>
 </td></tr>
-<tr class="memitem:ga1b1322465dc794aae7451ab949d28a19"><td class="memItemLeft" align="right" valign="top"><a id="ga1b1322465dc794aae7451ab949d28a19"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>wiced_bt_mesh_provisioning_record_status_t</b> { <br />
+<tr class="memitem:ga4a5bd636bfe824e6c2b94b0de6639c9a"><td class="memItemLeft" align="right" valign="top"><a id="ga4a5bd636bfe824e6c2b94b0de6639c9a"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>wiced_bt_mesh_provisioning_record_response_status_t</b> { <br />
 &#160;&#160;<b>WICED_BT_MESH_PROVISIONING_RECORD_RESPONSE_STATUS_SUCCESS</b> = 0x00, 
 <br />
 &#160;&#160;<b>WICED_BT_MESH_PROVISIONING_RECORD_RESPONSE_STATUS_NOT_PRESENT</b> = 0x01, 
@@ -1315,7 +1446,7 @@ Status codes for the Provisioning Record Response PDU</h2></td></tr>
 &#160;&#160;<b>WICED_BT_MESH_PROVISIONING_RECORD_RESPONSE_STATUS_OUT_OF_BOUNDS</b> = 0x02
 <br />
  }</td></tr>
-<tr class="separator:ga1b1322465dc794aae7451ab949d28a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ga4a5bd636bfe824e6c2b94b0de6639c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 OOB callback definitions</h2></td></tr>
@@ -1578,7 +1709,7 @@ OOB callback definitions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get message handler callback. </p>
-<p>The WICED Mesh Application library implements that function to find and return the message handler corresponding to the opcode of received message. If opcode does not correspond to any supported model then the function returns NULL. Otherwise it returns the message handler.</p>
+<p>The AIROC Mesh Application library implements that function to find and return the message handler corresponding to the opcode of received message. If opcode does not correspond to any supported model then the function returns NULL. Otherwise it returns the message handler.</p>
 <p>The 0xffff value of the comany_id means special case when message came from Network or Transport layer (see Special Commands of the Proxy Filter, Heartbeat and other).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1606,7 +1737,7 @@ OOB callback definitions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Publication request callback. </p>
-<p>The WICED Mesh Application library implements that function to be notified when periodic publication configuration has changed or when a model need to publish its status. If period is set to 0, the publication needs to stop. Period between 1 and 0xFFFE indicates that Periodic Publication for the specified model is being changed. Value 0xFFFF indicates that the value needs to be published now.</p>
+<p>The AIROC Mesh Application library implements that function to be notified when periodic publication configuration has changed or when a model need to publish its status. If period is set to 0, the publication needs to stop. Period between 1 and 0xFFFE indicates that Periodic Publication for the specified model is being changed. Value 0xFFFF indicates that the value needs to be published now.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">elem_idx</td><td>Element index </td></tr>
@@ -1753,6 +1884,196 @@ OOB callback definitions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga029e8aebb27e8d4a9088a4b11fcce246"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga029e8aebb27e8d4a9088a4b11fcce246">&#9670;&nbsp;</a></span>wiced_bt_mesh_core_adv_send_cb_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef wiced_bool_t(* wiced_bt_mesh_core_adv_send_cb_t) (uint8_t instance, uint8_t transmissions, uint32_t interval, uint8_t type, uint8_t *own_bd_addr, const uint8_t *adv_data, uint8_t adv_data_len, const uint8_t *scan_rsp_data, uint8_t scan_rsp_data_len)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition of the callback function to send advert messages or stop sending it or reset all adverts. </p>
+<p>Application implements that function. 0 instance means reset all adverts - then all other params should be ignored. 0 transmissions means stop specific instance then all other params except instance should be ignored.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">instance</td><td>Adv instance to send or stop. 0 instance means reset all adverts - then all other params should be ignored. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">transmissions</td><td>Number of transmissions. 0 means stop adv with that instance </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">interval</td><td>Adv interval </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>Adv type - see wiced_bt_ble_multi_advert_type_e in wiced_bt_ble.h @oaram[in] own_bd_addr Own LE address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">adv_data</td><td>Advertisement data to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">adv_data_len</td><td>Length of the advertisement data to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">scan_rsp_data</td><td>Scan response data to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">scan_rsp_data_len</td><td>Length of the scan response data to send</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>WICED_TRUE on success; WICED_FALSE on error </dd></dl>
+
+</div>
+</div>
+<a id="gaa3e49a2dc4626402aa6001fe9620a5b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa3e49a2dc4626402aa6001fe9620a5b8">&#9670;&nbsp;</a></span>wiced_bt_mesh_core_hal_rand_gen_num_array_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* wiced_bt_mesh_core_hal_rand_gen_num_array_t) (uint32_t *randNumberArrayPtr, uint32_t length)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fills a given array with randomly generated 32-bit integers. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">randNumberArrayPtr</td><td>The pointer to an array to be populated with random numbers.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>The length of the array pointed to by randNumberArrayPtr. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga0ff5534132da3ed051b729e66edd6379"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0ff5534132da3ed051b729e66edd6379">&#9670;&nbsp;</a></span>wiced_bt_mesh_core_hal_get_pseudo_rand_number_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint32_t(* wiced_bt_mesh_core_hal_get_pseudo_rand_number_t) (void)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This functin returns a pseudo random number. </p>
+<dl class="section return"><dt>Returns</dt><dd>A randomly generated 32-bit integer. </dd></dl>
+
+</div>
+</div>
+<a id="ga752f79974790268e4e5af5e4516ea7aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga752f79974790268e4e5af5e4516ea7aa">&#9670;&nbsp;</a></span>wiced_bt_mesh_core_hal_rand_gen_num_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint32_t(* wiced_bt_mesh_core_hal_rand_gen_num_t) (void)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generates and returns a random 32-bit integer. </p>
+<p>Internal functions check that the generating hardware is warmed up and ready before returning the random value. If the hardware is too "cold" at the time of use, the function will instead use the BT clock as a "seed" and generate a "soft" random number.</p>
+<dl class="section return"><dt>Returns</dt><dd>A randomly generated 32-bit integer. </dd></dl>
+
+</div>
+</div>
+<a id="gad1209c42aa9f4f39124aecda34281817"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad1209c42aa9f4f39124aecda34281817">&#9670;&nbsp;</a></span>wiced_bt_mesh_core_hal_delete_nvram_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* wiced_bt_mesh_core_hal_delete_nvram_t) (uint16_t vs_id, wiced_result_t *p_status)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>deletes data from NVRAM at specified VS id </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vs_id</td><td>: Volatile Section Identifier. Application can use the VS ids from WICED_NVRAM_VSID_START to WICED_NVRAM_VSID_END</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">p_status</td><td>: Pointer to location where status of the call is returned</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="gab35ec1c11bcbed428c83fe63f2375f8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab35ec1c11bcbed428c83fe63f2375f8c">&#9670;&nbsp;</a></span>wiced_bt_mesh_core_hal_write_nvram_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint16_t(* wiced_bt_mesh_core_hal_write_nvram_t) (uint16_t vs_id, uint16_t data_length, uint8_t *p_data, wiced_result_t *p_status)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Writes the data to NVRAM, Application can write up to 255 bytes in one VS id section. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vs_id</td><td>: Volatile Section Identifier. Application can use the VS ids from WICED_NVRAM_VSID_START to WICED_NVRAM_VSID_END</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_length</td><td>: Length of the data to be written to the NVRAM,</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_data</td><td>: Pointer to the data to be written to the NVRAM</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">p_status</td><td>: Pointer to location where status of the call is returned</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>number of bytes written, 0 on error </dd></dl>
+
+</div>
+</div>
+<a id="gab555f24ead6112b89d4de338e79e6b4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab555f24ead6112b89d4de338e79e6b4a">&#9670;&nbsp;</a></span>wiced_bt_mesh_core_hal_read_nvram_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint16_t(* wiced_bt_mesh_core_hal_read_nvram_t) (uint16_t vs_id, uint16_t data_length, uint8_t *p_data, wiced_result_t *p_status)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reads the data from NVRAM. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vs_id</td><td>: Volatile Section Identifier. Application can use the VS ids from WICED_NVRAM_VSID_START to WICED_NVRAM_VSID_END</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_length</td><td>: Length of the data to be read from NVRAM</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">p_data</td><td>: Pointer to the buffer to which data will be copied</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">p_status</td><td>: Pointer to location where status of the call is returned</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the number of bytes read, 0 on failure </dd></dl>
+
+</div>
+</div>
+<a id="ga649029885402c5995c38669566887f51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga649029885402c5995c38669566887f51">&#9670;&nbsp;</a></span>wiced_bt_mesh_core_hal_aes_encrypt_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* wiced_bt_mesh_core_hal_aes_encrypt_t) (uint8_t *in_data, uint8_t *out_data, uint8_t *key)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculate AES encryption by using Hardware acceleration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">in_data</td><td>: point to input data buffer </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">[in|out]</td><td>out_data : point to output data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>: point to key data buffer</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
 <a id="gac19ccef557a6668b64e41e6602118e94"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gac19ccef557a6668b64e41e6602118e94">&#9670;&nbsp;</a></span>wiced_bt_mesh_core_send_complete_callback_t</h2>
 
@@ -1774,6 +2095,38 @@ OOB callback definitions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
+
+</div>
+</div>
+<a id="ga7aba14d11288be819669b3247e46da29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7aba14d11288be819669b3247e46da29">&#9670;&nbsp;</a></span>wiced_bt_mesh_core_provisioning_record_request_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef { ... }   <a class="el" href="group__wiced__bt__mesh__core.html#ga7aba14d11288be819669b3247e46da29">wiced_bt_mesh_core_provisioning_record_request_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provisioning Record Request PDU parameters format. </p>
+
+</div>
+</div>
+<a id="ga34b96a5d8887dc3b1003625ac91a1420"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga34b96a5d8887dc3b1003625ac91a1420">&#9670;&nbsp;</a></span>wiced_bt_mesh_core_provisioning_record_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef { ... }   <a class="el" href="group__wiced__bt__mesh__core.html#ga34b96a5d8887dc3b1003625ac91a1420">wiced_bt_mesh_core_provisioning_record_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provisioning Record Response PDU parameters format. </p>
 
 </div>
 </div>
@@ -1931,6 +2284,56 @@ OOB callback definitions</h2></td></tr>
 
 </div>
 </div>
+<a id="gab238417382f333b820f54329e0586b84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab238417382f333b820f54329e0586b84">&#9670;&nbsp;</a></span>wiced_bt_mesh_core_provision_records_get_cb_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint16_t(* wiced_bt_mesh_core_provision_records_get_cb_t) (uint16_t *buffer)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition of the callback function on get provisioning records list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td>Pointer to save list of provisioning records IDs</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Number of the provisioning records IDs in the list. </dd></dl>
+
+</div>
+</div>
+<a id="ga0d4ec836d30498e00d79b50652b1af03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0d4ec836d30498e00d79b50652b1af03">&#9670;&nbsp;</a></span>wiced_bt_mesh_core_provision_record_req_cb_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint16_t(* wiced_bt_mesh_core_provision_record_req_cb_t) (uint16_t record_id, uint8_t *buffer, uint16_t fragment_length, uint16_t fragment_offset, uint16_t *record_size)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition of the callback function on get fragment of the provisioning record. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">item_type</td><td>- record designated tag </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">buffer</td><td>- pointer to the memory buffer to store the record </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fragment_length</td><td>- number of bytes to read </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fragment_offset</td><td>- start offset to read the record </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">record_size</td><td>- pointer to the output parameter to store total record size</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>uint16_t - number of bytes that was actually read to the buffer </dd></dl>
+
+</div>
+</div>
 <a id="ga34c35d7877ab5180d9248af43f53a06a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga34c35d7877ab5180d9248af43f53a06a">&#9670;&nbsp;</a></span>wiced_bt_mesh_core_get_dev_key_callback_t</h2>
 
@@ -2041,6 +2444,54 @@ OOB callback definitions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ga614041f855c21e8a06110b88d8b6a8b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga614041f855c21e8a06110b88d8b6a8b3">&#9670;&nbsp;</a></span>wiced_bt_mesh_core_set_hal_api()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wiced_bt_mesh_core_set_hal_api </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structwiced__bt__mesh__core__hal__api__t.html">wiced_bt_mesh_core_hal_api_t</a> *&#160;</td>
+          <td class="paramname"><em>hal_api</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets hal api. </p>
+<p>Application has to implement all these functions and call <a class="el" href="group__wiced__bt__mesh__core.html#ga614041f855c21e8a06110b88d8b6a8b3" title="Sets hal api.">wiced_bt_mesh_core_set_hal_api()</a> at the startup.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pointer</td><td>to hal api </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga146e1f12905b85e28eaf54a11f74736d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga146e1f12905b85e28eaf54a11f74736d">&#9670;&nbsp;</a></span>wiced_bt_mesh_core_get_hal_api()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structwiced__bt__mesh__core__hal__api__t.html">wiced_bt_mesh_core_hal_api_t</a>* wiced_bt_mesh_core_get_hal_api </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns hal api. </p>
+<dl class="section return"><dt>Returns</dt><dd>pointer to hal api </dd></dl>
+
+</div>
+</div>
 <a id="ga1bd0d715179b13a0ccd5700a1bc67f55"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga1bd0d715179b13a0ccd5700a1bc67f55">&#9670;&nbsp;</a></span>wiced_bt_mesh_core_init()</h2>
 
@@ -2069,14 +2520,68 @@ OOB callback definitions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga8d293a403925663b8b62400793ceba7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8d293a403925663b8b62400793ceba7f">&#9670;&nbsp;</a></span>wiced_bt_mesh_core_deinit()</h2>
+<a id="ga06764c4d3bde30e471ad4d37dbaad61b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga06764c4d3bde30e471ad4d37dbaad61b">&#9670;&nbsp;</a></span>wiced_bt_mesh_core_adv_end()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void wiced_bt_mesh_core_deinit </td>
+          <td class="memname">void wiced_bt_mesh_core_adv_end </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>instance</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Advertisement stopped notification. </p>
+<p>Application calls it when requested number of transmissions of the advertisement has been sent and it stopped.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">instance</td><td>Instance of the stopped advertisement </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga9637a1f85cea554caeae23f108d13eee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9637a1f85cea554caeae23f108d13eee">&#9670;&nbsp;</a></span>wiced_bt_mesh_core_set_max_num_adv_instances()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wiced_bt_mesh_core_set_max_num_adv_instances </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>max_num</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set max number of advertisement instances. </p>
+<p>Application calls it before first advertisement start. It can be called after first advertisement start because that number is always &gt;= 1.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">max_num</td><td>Mmax number of advertisement instances </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga6d1080ad7b0fab9ed96731674cb595b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6d1080ad7b0fab9ed96731674cb595b4">&#9670;&nbsp;</a></span>wiced_bt_mesh_core_deinit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">wiced_bool_t wiced_bt_mesh_core_deinit </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__wiced__bt__mesh__core.html#ga99efb88f995edc91d84cdf29fd3c8eec">wiced_bt_core_nvram_access_t</a>&#160;</td>
           <td class="paramname"><em>nvram_access_callback</em></td><td>)</td>
@@ -2089,10 +2594,11 @@ OOB callback definitions</h2></td></tr>
 <p>The wiced_bt_mesh_core_deinit function can be called to reset device to unprovisioned state. The function deletes main nvram item and restarts device.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">nvram_access_callback</td><td>Callback function to read/write from/to NVRAM </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nvram_access_callback</td><td>Callback function to read/write from/to NVRAM</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>On FALSE caller shall reboot the node via wiced_hal_wdog_reset_system() </dd></dl>
 
 </div>
 </div>
@@ -2113,7 +2619,7 @@ OOB callback definitions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Mesh Core Start. </p>
-<p>The wiced_bt_mesh_core_start function should be called at device startup after calling <a class="el" href="group__wiced__bt__mesh__core.html#ga1bd0d715179b13a0ccd5700a1bc67f55" title="Mesh Core initialization.">wiced_bt_mesh_core_init()</a>. The function starts beacons and service advertisments. It is usually called by application from mesh_app_init(). </p>
+<p>The wiced_bt_mesh_core_start function should be called at device startup after calling <a class="el" href="group__wiced__bt__mesh__core.html#ga1bd0d715179b13a0ccd5700a1bc67f55" title="Mesh Core initialization.">wiced_bt_mesh_core_init()</a>. The function starts beacons and service advertisements. It is usually called by application from mesh_app_init(). </p>
 
 </div>
 </div>
@@ -2137,7 +2643,7 @@ OOB callback definitions</h2></td></tr>
 <p>Called by the app to set max sending packet length in the core and provisioning layer.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">gatt_mtu</td><td>Maximum sizeo of the packet to be used over GATT. 0 means default value (20). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gatt_mtu</td><td>Maximum size of the packet to be used over GATT. 0 means default value (20). </td></tr>
   </table>
   </dd>
 </dl>
@@ -2766,8 +3272,8 @@ OOB callback definitions</h2></td></tr>
 
 </div>
 </div>
-<a id="gacc7311d144020069d287dc02c6a3a8e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gacc7311d144020069d287dc02c6a3a8e1">&#9670;&nbsp;</a></span>wiced_bt_mesh_core_provision_server_init()</h2>
+<a id="gadc2fc8dd605434fe8695ba43757f2319"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadc2fc8dd605434fe8695ba43757f2319">&#9670;&nbsp;</a></span>wiced_bt_mesh_core_provision_server_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2806,7 +3312,19 @@ OOB callback definitions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="group__wiced__bt__mesh__core.html#ga43bee1d162368064660d2ab5e9666efb">wiced_bt_mesh_core_provision_gatt_send_cb_t</a>&#160;</td>
-          <td class="paramname"><em>gatt_send_cb</em>&#160;</td>
+          <td class="paramname"><em>gatt_send_cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__wiced__bt__mesh__core.html#gab238417382f333b820f54329e0586b84">wiced_bt_mesh_core_provision_records_get_cb_t</a>&#160;</td>
+          <td class="paramname"><em>get_precords_cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__wiced__bt__mesh__core.html#ga0d4ec836d30498e00d79b50652b1af03">wiced_bt_mesh_core_provision_record_req_cb_t</a>&#160;</td>
+          <td class="paramname"><em>request_precord_cb</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2820,12 +3338,14 @@ OOB callback definitions</h2></td></tr>
 <p>Called by provisioning app to initialize provisioning layer for both PB_ADV and PB_GATT.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">priv_key</td><td>Private key(32 bytes) to use for ECDH authentication. It should be same is both client and server are initialized </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">priv_key</td><td>Private key(32 bytes) to use for ECDH authentication. It should be same if both client and server are initialized </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">started_cb</td><td>Callback function to be called on provisioning start. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">end_cb</td><td>Callback function to be called on provisioning end, or error. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">get_capabilities_cb</td><td>Callback function to be called on Capabilities get </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">get_oob_cb</td><td>Callback function to be called on OOB get </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">gatt_send_cb</td><td>Callback function to send provisioning packet ofer GATT</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gatt_send_cb</td><td>Callback function to send provisioning packet over GATT </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">get_precords_cb</td><td>Callback function to get list of provisioning records </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">request_precord_cb</td><td>Callback function to request fragment of the provisioning record</td></tr>
   </table>
   </dd>
 </dl>
@@ -3626,6 +4146,34 @@ OOB callback definitions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga9984cd943cbef8ebc470165f6d33764a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9984cd943cbef8ebc470165f6d33764a">&#9670;&nbsp;</a></span>wiced_bt_mesh_core_reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wiced_bt_mesh_core_reset </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resets node to unprovisioned state without restarting. </p>
+<p>It is quick synchronous function. Node is in the unprovisioned state on return from the function.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None </dd></dl>
+
+</div>
+</div>
 <a id="ga8108b7a7f857f821b57c6469559db321"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga8108b7a7f857f821b57c6469559db321">&#9670;&nbsp;</a></span>wiced_bt_mesh_core_get_app_key()</h2>
 
@@ -4011,7 +4559,7 @@ OOB callback definitions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Minimum and maximum delay in milliseconds of the message being relayed. </p>
-<p>Default values: 20, 50 </p>
+<p>Default values: 0, 10 </p>
 
 </div>
 </div>
